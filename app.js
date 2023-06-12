@@ -89,7 +89,7 @@ const countDown = () => {
         sec.innerHTML = 59;
     } else {
         sec.innerHTML = sec.innerHTML -= 1;
-        if (secStr < 10) {
+        if (secStr < 11) {
             sec.innerHTML = '0' + sec.innerHTML;
         }
     }
