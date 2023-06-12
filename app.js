@@ -3,6 +3,8 @@ let buttons = document.getElementsByTagName('button')
 const timeButton = document.getElementById('time-button')
 const min = document.getElementById('timer-min');
 const sec = document.getElementById('timer-sec');
+let audio = new Audio();
+audio.src = 'timesup.mp3'
 
 const makeItRun = () => {
     if (timeButton.innerHTML == 'Start') {
@@ -65,17 +67,23 @@ const countDown = () => {
             const sessionElement = document.getElementById('session');
             sessionElement.innerHTML = Number(sessionElement.innerHTML) + 1;
             if (sessionElement.innerHTML % 2 == 0) {
+                console.log('Here???')
+                audio.play();
                 setTime(15);
                 makeItRun();
                 countDown();
                 document.getElementById('message').innerHTML = 'Time to rest!'
             } else {
+                console.log('Here??')
+                audio.play();
                 setTime(5);
                 makeItRun();
                 countDown();
                 document.getElementById('message').innerHTML = 'Time to rest!'
             }
         } else if (session == 'short-break' || session == 'long-break') {
+            console.log('Here?')
+            audio.play();
             setTime(25);
             makeItRun();
             countDown();
@@ -114,5 +122,4 @@ const rewind = () => {
 const forward = () => {
     min.innerHTML = '00'
     sec.innerHTML = '00'
-    console.log('Hi')
 }
