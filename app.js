@@ -1,3 +1,4 @@
+import { clearInterval, setInterval } from 'worker-timers';
 let session = 'pomodoro'
 let buttons = document.getElementsByTagName('button')
 const timeButton = document.getElementById('time-button')
@@ -16,7 +17,9 @@ const switchButton = () => {
     if (timeButton.innerHTML === 'Start') {
         timeButton.innerHTML = 'Stop';
         document.getElementById('message').innerHTML = "Time to work!";
-        counting = setInterval(countDown, 1000);
+        let counting = setInterval(() => {
+            countDown
+        }, 1000);
     } else {
         timeButton.innerHTML = 'Start';
         document.getElementById('message').innerHTML = "Click Start and let's work!";
@@ -123,3 +126,11 @@ const forward = () => {
     min.innerHTML = '00'
     sec.innerHTML = '00'
 }
+
+document.getElementById('25min').addEventListener('click', () => setTime(25))
+document.getElementById('5min').addEventListener('click', () => setTime(5))
+document.getElementById('15min').addEventListener('click', () => setTime(15))
+document.getElementById('reset').addEventListener('click', reset)
+document.getElementById('rewind').addEventListener('click', rewind)
+document.getElementById('time-button').addEventListener('click', switchButton)
+document.getElementById('skip').addEventListener('click', forward)

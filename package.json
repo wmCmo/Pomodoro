@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "worker-timers": "^7.0.72"
+  }
+}

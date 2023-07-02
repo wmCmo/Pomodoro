@@ -22,9 +22,9 @@
     <div class="display">
         <div id="container">
             <div id="select-time">
-                <button class="select-time-button" id="25min" type="button" onclick="setTime(25)">Pomodoro</button>
-                <button class="select-time-button" id="5min" onclick="setTime(5)">Short Break</button>
-                <button class="select-time-button" id="15min" onclick="setTime(15)">Long Break</button>
+                <button class="select-time-button" id="25min" type="button">Pomodoro</button>
+                <button class="select-time-button" id="5min">Short Break</button>
+                <button class="select-time-button" id="15min">Long Break</button>
             </div>
             <div id="timer" class="container">
                 <h2 id="timer-min">25</h2>
@@ -32,7 +32,7 @@
                 <h2 id="timer-sec">00</h2>
             </div>
             <div id="buttons">
-                <button id="reset" type="button" class="control" onclick="reset()"><svg
+                <button id="reset" type="button" class="control"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                         <rect width="256" height="256" fill="none" />
                         <polyline points="24 56 24 104 72 104" fill="none" stroke="currentColor" stroke-linecap="round"
@@ -40,7 +40,7 @@
                         <path d="M67.59,192A88,88,0,1,0,65.77,65.77L24,104" fill="none" stroke="currentColor"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="24" />
                     </svg></button>
-                <button id="go-back" class="control" onclick="rewind()"><svg xmlns="http://www.w3.org/2000/svg"
+                <button id="go-back" class="control"><svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 256 256">
                         <rect width="256" height="256" fill="none" />
                         <polyline points="200 208 120 128 200 48" fill="none" stroke="currentColor"
@@ -48,8 +48,8 @@
                         <polyline points="120 208 40 128 120 48" fill="none" stroke="currentColor"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="24" />
                     </svg></button>
-                <button type="button" id="time-button" onclick="switchButton()" class="control">Start</button>
-                <button id="skip" class="control" onclick="forward()"><svg xmlns="http://www.w3.org/2000/svg"
+                <button type="button" id="time-button" class="control">Start</button>
+                <button id="skip" class="control"><svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 256 256">
                         <rect width="256" height="256" fill="none" />
                         <polyline points="56 48 136 128 56 208" fill="none" stroke="currentColor" stroke-linecap="round"
@@ -66,7 +66,7 @@
             <span id="message">Click Start and let's work!</span>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="./app.js" type="module"></script>
 </body>
 
 </html>
