@@ -1,4 +1,5 @@
-import { clearInterval, setInterval } from './node_modules/worker-timers';
+// import { clearInterval, setInterval } from 'worker-timers';
+let counting;
 let session = 'pomodoro'
 let buttons = document.getElementsByTagName('button')
 const timeButton = document.getElementById('time-button')
@@ -17,9 +18,7 @@ const switchButton = () => {
     if (timeButton.innerHTML === 'Start') {
         timeButton.innerHTML = 'Stop';
         document.getElementById('message').innerHTML = "Time to work!";
-        let counting = setInterval(() => {
-            countDown
-        }, 1000);
+        counting = setInterval(countDown, 1000);
     } else {
         timeButton.innerHTML = 'Start';
         document.getElementById('message').innerHTML = "Click Start and let's work!";
