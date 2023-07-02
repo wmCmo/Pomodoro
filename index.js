@@ -6,7 +6,7 @@ const timeButton = document.getElementById('time-button')
 const min = document.getElementById('timer-min');
 const sec = document.getElementById('timer-sec');
 let audio = new Audio();
-audio.src = 'timesup.mp3'
+audio.src = 'https://github.com/wmCmo/Pomodoro/raw/Finding-sound/timesup.mp3'
 
 const makeItRun = () => {
     if (timeButton.innerHTML == 'Start') {
