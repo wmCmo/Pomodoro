@@ -1,4 +1,4 @@
-import { clearInterval, setInterval } from 'worker-timers';
+import { clearInterval, setInterval } from './node_modules/worker-timers';
 let session = 'pomodoro'
 let buttons = document.getElementsByTagName('button')
 const timeButton = document.getElementById('time-button')
