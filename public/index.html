@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="nav">
+        <a id="logo" href="https://exzachly.notion.site" target="_blank">🍅 Pomodoro by</a>
+        <a id="logo" href="https://exzachly.notion.site" target="_blank"><img src="../src/signature.svg"></a>
+    </div>
+    <div class="display">
+        <div id="container">
+            <div id="select-time">
+                <button class="select-time-button" id="25min" type="button">Pomodoro</button>
+                <button class="select-time-button" id="5min">Short Break</button>
+                <button class="select-time-button" id="15min">Long Break</button>
+            </div>
+            <div id="timer" class="container">
+                <h2 id="timer-min">25</h2>
+                <h2>:</h2>
+                <h2 id="timer-sec">00</h2>
+            </div>
+            <div id="buttons">
+                <button id="reset" type="button" class="control"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none" />
+                        <polyline points="24 56 24 104 72 104" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="24" />
+                        <path d="M67.59,192A88,88,0,1,0,65.77,65.77L24,104" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24" />
+                    </svg></button>
+                <button id="rewind" class="control"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none" />
+                        <polyline points="200 208 120 128 200 48" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24" />
+                        <polyline points="120 208 40 128 120 48" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24" />
+                    </svg></button>
+                <button type="button" id="time-button" class="control">Start</button>
+                <button id="skip" class="control"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none" />
+                        <polyline points="56 48 136 128 56 208" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="24" />
+                        <polyline points="136 48 216 128 136 208" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="24" />
+                    </svg></button>
+            </div>
+        </div>
+        <div id="information">
+            <div class="session"></div>
+            <span style="font-weight: 600;">Session: </span>
+            <span id="session" style="font-weight: 600;">0</span>
+            <span id="message">Click Start and let's work!</span>
+        </div>
+    </div>
+    <script type="module" src="../dist/main.js"></script>
+</body>
+
+</html>

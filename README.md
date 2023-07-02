@@ -7,6 +7,6 @@ This system helps promote your productivity.
 
 ### Things to work on
 - Metadata
-- Remove styling and script from `index.html` and put them in the 
-- Notification after each interval with a sound.
+- Remove styling and script from `index.html`.
+- ~Notification after each interval with a sound.~
 - Customizable background.
